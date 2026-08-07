@@ -2,6 +2,9 @@
 
 # VPC Monitoring with Flow Logs
 
+<img width="678" height="731" alt="image" src="https://github.com/user-attachments/assets/f522df42-c371-4304-a9ca-a9de89c281c7" />
+
+
 **Project Link:** [View Project](http://nextwork.ai/projects/aws-networks-monitoring)
 
 **Author:** abhi0b@duck.com  
