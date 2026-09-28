@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abhishek Biradar — Cloud Operations, AWS, Monitoring and Infrastructure portfolio.">
+  <title>Abhishek Biradar | Cloud & Infrastructure Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <header class="nav">
+    <a class="brand" href="#home">AB<span>.</span></a>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> CLOUD • OPERATIONS • AUTOMATION</p>
+        <h1>Building reliable<br><span>cloud infrastructure.</span></h1>
+        <p class="lead">
+          System Administrator focused on AWS, monitoring, incident response,
+          networking, automation and practical cloud engineering.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">Explore Projects →</a>
+          <a class="btn ghost" href="https://github.com/0babhi" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+        <div class="quick-stats">
+          <div><strong>2+</strong><span>Years Experience</span></div>
+          <div><strong>AWS</strong><span>Primary Cloud</span></div>
+          <div><strong>24×7</strong><span>Operations Mindset</span></div>
+        </div>
+      </div>
+      <div class="terminal-card">
+        <div class="terminal-top"><i></i><i></i><i></i><span>abhishek@cloud:~</span></div>
+        <pre><code><span class="muted">$</span> whoami
+<span class="cyan">abhishek.biradar</span>
+
+<span class="muted">$</span> focus
+AWS / Linux / Monitoring
+Networking / Security
+Automation / Incident Response
+
+<span class="muted">$</span> tools
+AWS • Datadog • Prometheus
+Splunk • Docker • Git
+Python • PowerShell • Shell
+
+<span class="muted">$</span> status
+<span class="green">● available for opportunities</span></code></pre>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-head">
+        <p class="eyebrow">01 / ABOUT</p>
+        <h2>Operations experience, backed by hands-on projects.</h2>
+      </div>
+      <div class="about-grid">
+        <p class="about-text">
+          I work across cloud infrastructure and application operations, with experience
+          supporting Linux and Windows environments, monitoring production services,
+          responding to incidents, troubleshooting network and CDN issues, and improving
+          repetitive operational work through scripting.
+        </p>
+        <div class="about-list">
+          <div><span>01</span> Cloud infrastructure & troubleshooting</div>
+          <div><span>02</span> Monitoring, alerting & reliability</div>
+          <div><span>03</span> Networking, DNS, HTTP & TLS</div>
+          <div><span>04</span> Security & operational automation</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head row">
+        <div>
+          <p class="eyebrow">02 / PROJECTS</p>
+          <h2>Selected hands-on work.</h2>
+        </div>
+        <p class="section-note">AWS labs, automation and troubleshooting projects.</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="aws">AWS</button>
+        <button class="filter" data-filter="security">Security</button>
+        <button class="filter" data-filter="monitoring">Monitoring</button>
+        <button class="filter" data-filter="automation">Automation</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project featured" data-tags="aws monitoring security">
+          <div class="project-top"><span class="number">01</span><span class="badge">AWS • NETWORKING</span></div>
+          <h3>VPC Monitoring with Flow Logs</h3>
+          <p>Built two VPCs, launched EC2 instances, configured VPC Flow Logs and CloudWatch, established VPC peering, and used Logs Insights to troubleshoot traffic.</p>
+          <div class="tags"><span>VPC</span><span>EC2</span><span>CloudWatch</span><span>IAM</span></div>
+          <a href="https://0babhi.github.io/Abhishek.biradar/" target="_blank" rel="noreferrer">Case study ↗</a>
+        </article>
+
+        <article class="project" data-tags="aws">
+          <div class="project-top"><span class="number">02</span><span class="badge">AWS</span></div>
+          <h3>AWS VPC & Network Architecture</h3>
+          <p>Hands-on work with VPCs, public/private subnets, route tables, gateways, security groups, VPC peering, endpoints and connectivity testing.</p>
+          <div class="tags"><span>VPC</span><span>Subnets</span><span>Routing</span><span>Security Groups</span></div>
+          <span class="project-status">Hands-on project</span>
+        </article>
+
+        <article class="project" data-tags="aws">
+          <div class="project-top"><span class="number">03</span><span class="badge">AWS • STORAGE</span></div>
+          <h3>Static Website on Amazon S3</h3>
+          <p>Configured an S3-based static website and worked through bucket access, hosting concepts and AWS CLI operations.</p>
+          <div class="tags"><span>S3</span><span>AWS CLI</span><span>IAM</span></div>
+          <span class="project-status">Hands-on project</span>
+        </article>
+
+        <article class="project" data-tags="monitoring automation">
+          <div class="project-top"><span class="number">04</span><span class="badge">PYTHON • SSL</span></div>
+          <h3>SSL Certificate Monitoring Automation</h3>
+          <p>Built a Python-based workflow to check certificates across multiple groups, generate HTML/Excel reports, and surface certificates approaching an expiry threshold.</p>
+          <div class="tags"><span>Python</span><span>OpenSSL</span><span>pandas</span><span>openpyxl</span></div>
+          <span class="project-status">Automation</span>
+        </article>
+
+        <article class="project" data-tags="monitoring automation">
+          <div class="project-top"><span class="number">05</span><span class="badge">MONITORING</span></div>
+          <h3>Website Uptime Monitoring</h3>
+          <p>Created proactive monitoring scripts to check website availability and trigger alerts, reducing manual checks and improving incident detection.</p>
+          <div class="tags"><span>Python</span><span>HTTP</span><span>Alerts</span><span>Automation</span></div>
+          <span class="project-status">Automation</span>
+        </article>
+
+        <article class="project" data-tags="aws security">
+          <div class="project-top"><span class="number">06</span><span class="badge">AWS • SECURITY</span></div>
+          <h3>AWS Security Labs</h3>
+          <p>Hands-on projects covering IAM, KMS, Secrets Manager, GuardDuty and security monitoring concepts with practical AWS configurations.</p>
+          <div class="tags"><span>IAM</span><span>KMS</span><span>GuardDuty</span><span>Secrets Manager</span></div>
+          <span class="project-status">Hands-on project</span>
+        </article>
+
+        <article class="project" data-tags="aws monitoring">
+          <div class="project-top"><span class="number">07</span><span class="badge">DOCKER • OBSERVABILITY</span></div>
+          <h3>Containerized Monitoring Stack</h3>
+          <p>Deployed a monitoring stack with Docker to practice service observability, container operations and monitoring workflows.</p>
+          <div class="tags"><span>Docker</span><span>Monitoring</span><span>Containers</span></div>
+          <span class="project-status">Hands-on project</span>
+        </article>
+
+        <article class="project" data-tags="aws">
+          <div class="project-top"><span class="number">08</span><span class="badge">KUBERNETES</span></div>
+          <h3>Kubernetes Cluster Deployment</h3>
+          <p>Hands-on cluster deployment and Kubernetes fundamentals, including workload orchestration and understanding cluster components.</p>
+          <div class="tags"><span>Kubernetes</span><span>Containers</span><span>Cloud</span></div>
+          <span class="project-status">Hands-on project</span>
+        </article>
+
+        <article class="project" data-tags="aws security">
+          <div class="project-top"><span class="number">09</span><span class="badge">AWS • COMPUTE</span></div>
+          <h3>AWS Infrastructure & Application Labs</h3>
+          <p>Worked through EC2, RDS/Aurora, CloudFormation, IAM roles, Auto Scaling concepts and AWS CLI troubleshooting.</p>
+          <div class="tags"><span>EC2</span><span>RDS Aurora</span><span>CloudFormation</span><span>AWS CLI</span></div>
+          <span class="project-status">Hands-on project</span>
+        </article>
+
+        <article class="project" data-tags="monitoring security">
+          <div class="project-top"><span class="number">10</span><span class="badge">CDN • TROUBLESHOOTING</span></div>
+          <h3>CDN & Production Troubleshooting</h3>
+          <p>Practical troubleshooting around DNS, HTTP/HTTPS, TLS, CDN traffic paths, access errors and internal-versus-external reachability.</p>
+          <div class="tags"><span>Akamai</span><span>DNS</span><span>HTTP</span><span>TLS</span></div>
+          <span class="project-status">Operations experience</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills">
+      <div class="section-head">
+        <p class="eyebrow">03 / TOOLBOX</p>
+        <h2>Technologies I work with.</h2>
+      </div>
+      <div class="skill-groups">
+        <div class="skill-group"><h3>Cloud</h3><p>AWS • EC2 • S3 • VPC • RDS/Aurora • IAM • CloudWatch • CloudFormation • KMS • GuardDuty • Secrets Manager</p></div>
+        <div class="skill-group"><h3>Monitoring</h3><p>Datadog • Prometheus • Grafana • Splunk • CloudWatch Logs • Uptime monitoring • Alerting</p></div>
+        <div class="skill-group"><h3>Networking</h3><p>DNS • HTTP/HTTPS • TLS/SSL • TCP/IP • Routing • Security Groups • CDN • Akamai</p></div>
+        <div class="skill-group"><h3>Automation</h3><p>Python • PowerShell • Shell • AWS CLI • Git • GitHub • pandas • openpyxl</p></div>
+        <div class="skill-group"><h3>Systems</h3><p>Linux • Windows Server • Nginx • Apache • Docker • Kubernetes</p></div>
+        <div class="skill-group"><h3>Operations</h3><p>Incident response • Troubleshooting • RCA • Change support • Stakeholder communication • SLA-focused operations</p></div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience">
+      <div class="section-head">
+        <p class="eyebrow">04 / EXPERIENCE</p>
+        <h2>What I bring to an operations team.</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div><p class="eyebrow">SYSTEM ADMINISTRATION / CLOUD OPERATIONS</p>
+          <h3>Production support & reliability</h3>
+          <p>Supported Linux and Windows systems in cloud-based SaaS environments; monitored services, investigated alerts, escalated complex incidents, supported deployments and collaborated with DevOps teams on troubleshooting and RCA.</p></div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div><p class="eyebrow">AUTOMATION</p>
+          <h3>Reducing repetitive operational work</h3>
+          <p>Used Python and PowerShell to automate monitoring and operational checks, including custom uptime and SSL certificate reporting workflows.</p></div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div><p class="eyebrow">CDN / WEB OPERATIONS</p>
+          <h3>Web traffic & access troubleshooting</h3>
+          <p>Worked with CDN configuration and website access issues involving DNS, HTTP/HTTPS, TLS and network controls, including SSL deployments across large website estates.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="contact-card">
+        <p class="eyebrow">05 / CONTACT</p>
+        <h2>Let’s build reliable systems.</h2>
+        <p>Interested in Cloud Operations, AWS, Infrastructure, Monitoring or Support Engineering opportunities.</p>
+        <div class="contact-links">
+          <a class="btn primary" href="https://github.com/0babhi" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="btn ghost" href="mailto:abhi0b@duck.com">Email me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Abhishek Biradar</span><span>Built for GitHub Pages</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
