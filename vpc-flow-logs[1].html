@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPC Monitoring with Flow Logs | Abhishek Biradar</title>
+<style>
+:root{--bg:#071018;--card:#0d1b26;--text:#eaf2f7;--muted:#9aabb8;--cyan:#52d9ff;--green:#65e6a7;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.7}
+.container{max-width:1000px;margin:auto;padding:50px 24px}.back{color:var(--cyan);text-decoration:none}.eyebrow{color:var(--cyan);font-size:12px;letter-spacing:2px;font-weight:bold;margin-top:35px}
+h1{font-size:clamp(42px,7vw,72px);line-height:1.05;margin:12px 0}h2{font-size:32px;margin-top:55px}h3{font-size:22px;color:var(--cyan)}
+p,li{color:#c3d0d9}.hero p{font-size:19px;max-width:800px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;margin:24px 0}
+img{max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line);margin:15px 0}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{border:1px solid var(--line);padding:5px 10px;border-radius:6px;color:var(--cyan);font-family:monospace;font-size:12px}
+.step{border-left:3px solid var(--cyan);padding:4px 0 4px 20px;margin:22px 0}.quote{border-left:3px solid var(--green);padding-left:18px;color:#b8c9d3}
+.btn{display:inline-block;background:var(--cyan);color:#061018;text-decoration:none;font-weight:bold;padding:11px 17px;border-radius:8px;margin-top:15px}
+footer{border-top:1px solid var(--line);margin-top:70px;padding-top:25px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<main class="container">
+<a class="back" href="index.html">← Back to Portfolio</a>
+
+<section class="hero">
+<p class="eyebrow">AWS • NETWORKING • MONITORING</p>
+<h1>VPC Monitoring with Flow Logs</h1>
+<p>A hands-on AWS project covering Amazon VPC, EC2, VPC Flow Logs, CloudWatch, IAM, VPC Peering, connectivity troubleshooting and CloudWatch Logs Insights.</p>
+<a class="btn" href="https://nextwork.ai/projects/6954a600-a89e-56b0-886b-7054da118a3b" target="_blank">View Original NextWork Project ↗</a>
+</section>
+
+<section class="card">
+<h2>Introducing Today's Project</h2>
+<h3>What is Amazon VPC?</h3>
+<p>Amazon VPC is an isolated cloud environment where AWS services can be tested without being in the main network.</p>
+<h3>How I used Amazon VPC</h3>
+<p>In this project, I used Amazon VPC for VPC peering and network connectivity testing.</p>
+<h3>What I didn't expect</h3>
+<p>One thing I didn't expect was working with CloudWatch Logs Insights and queries.</p>
+<h3>Project duration</h3>
+<p>Approximately 60 minutes.</p>
+</section>
+
+<section>
+<h2>Multi-VPC Architecture</h2>
+<div class="card">
+<p>I created two VPCs with separate CIDR blocks, public subnets and EC2 instances. VPC Flow Logs were configured to capture network traffic, while VPC Peering was later used to establish private communication between the VPCs.</p>
+<img src="https://nextwork.ai/content_maroon_agile_monkey/uploads/aws-networks-monitoring_3e1e79a1" alt="AWS VPC Monitoring Architecture">
+</div>
+</section>
+
+<section>
+<h2>Implementation</h2>
+
+<div class="step">
+<h3>Step 1 — Set up VPCs</h3>
+<p>Created two VPCs from scratch and configured their networking. The VPCs use unique CIDR blocks so their IP ranges do not overlap.</p>
+</div>
+
+<div class="step">
+<h3>Step 2 — Launch EC2 instances</h3>
+<p>Launched EC2 instances in each subnet so connectivity could be tested between the instances.</p>
+</div>
+
+<div class="step">
+<h3>Step 3 — Set up Logs</h3>
+<p>Configured VPC Flow Logs to track inbound and outbound network traffic and created a location for storing the records.</p>
+</div>
+
+<div class="step">
+<h3>Step 4 — Set IAM permissions for Logs</h3>
+<p>Created the IAM policy and role required for VPC Flow Logs to write records to CloudWatch.</p>
+</div>
+</section>
+
+<section>
+<h2>Connectivity Troubleshooting</h2>
+<div class="card">
+<h3>Initial ping test</h3>
+<p>The first ping test between the EC2 instances did not receive replies. Security-group rules were adjusted to allow ICMP traffic for testing.</p>
+</div>
+
+<div class="card">
+<h3>Public IP test</h3>
+<p>Ping using the other instance's public IPv4 address worked, showing that the instances could communicate across the public path.</p>
+</div>
+
+<div class="card">
+<h3>Private IP test</h3>
+<p>The private-IP ping failed because the VPCs did not yet have a private route between them.</p>
+</div>
+
+<div class="card">
+<h3>Solution — VPC Peering</h3>
+<p>Created a VPC Peering connection and updated both VPC route tables with the remote VPC CIDR. After this change, the EC2 instances could communicate using private IP addresses.</p>
+<img src="https://nextwork.ai/content_maroon_agile_monkey/uploads/aws-networks-monitoring_7316a13d" alt="VPC Peering configuration">
+</div>
+</section>
+
+<section>
+<h2>VPC Flow Logs</h2>
+<div class="card">
+<p>VPC Flow Logs provide information about IP traffic going to and from network interfaces in a VPC.</p>
+<p>Important fields include:</p>
+<div class="tags">
+<span class="tag">version</span><span class="tag">account-id</span><span class="tag">interface-id</span>
+<span class="tag">srcaddr</span><span class="tag">dstaddr</span><span class="tag">srcport</span>
+<span class="tag">dstport</span><span class="tag">protocol</span>
+</div>
+<img src="https://nextwork.ai/content_maroon_agile_monkey/uploads/aws-networks-monitoring_d116818e" alt="VPC Flow Logs">
+</div>
+</section>
+
+<section>
+<h2>CloudWatch Logs Insights</h2>
+<div class="card">
+<p>CloudWatch Logs Insights can analyze log data using queries to filter, process and combine records for troubleshooting and traffic analysis.</p>
+<p>The project used a query focused on identifying the top data transfers by source and destination IP addresses.</p>
+<img src="https://nextwork.ai/content_maroon_agile_monkey/uploads/aws-networks-monitoring_3e1e79a1" alt="CloudWatch Logs Insights">
+</div>
+</section>
+
+<section>
+<h2>IAM Configuration</h2>
+<div class="card">
+<p>An IAM policy was created to define the actions allowed, and an IAM role was created so VPC Flow Logs could access the required permissions and publish logs.</p>
+<img src="https://nextwork.ai/content_maroon_agile_monkey/uploads/aws-networks-monitoring_4334d777" alt="IAM configuration">
+</div>
+</section>
+
+<section>
+<h2>What I learned</h2>
+<div class="card">
+<p>This project gave me hands-on practice with VPC networking, EC2 connectivity, security groups, route tables, VPC Peering, VPC Flow Logs, IAM permissions and CloudWatch Logs Insights.</p>
+<p class="quote">The key troubleshooting flow was: test connectivity → inspect routing → establish VPC Peering → update routes → verify private connectivity → analyze Flow Logs.</p>
+</div>
+</section>
+
+<section>
+<h2>Technologies</h2>
+<div class="tags">
+<span class="tag">AWS VPC</span><span class="tag">EC2</span><span class="tag">VPC Flow Logs</span>
+<span class="tag">CloudWatch</span><span class="tag">Logs Insights</span><span class="tag">IAM</span>
+<span class="tag">VPC Peering</span><span class="tag">Route Tables</span><span class="tag">Security Groups</span>
+</div>
+</section>
+
+<footer>
+<p>Project based on my original NextWork project documentation.</p>
+<p><a class="back" href="index.html">← Return to portfolio</a></p>
+</footer>
+</main>
+</body>
+</html>
