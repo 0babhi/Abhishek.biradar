@@ -93,36 +93,8 @@ Python • PowerShell • Shell
         </div>
         <p class="section-note">AWS labs, automation and troubleshooting projects.</p>
       </div>
-
-      <div class="filters">
-<article class="project featured" data-tags="aws monitoring security"
-         onclick="window.location.href='vpc-flow-logs.html'"
-         style="cursor: pointer;">
-
-  <div class="project-top">
-    <span class="number">01</span>
-    <span class="badge">AWS • NETWORKING</span>
-  </div>
-
-  <h3>VPC Monitoring with Flow Logs</h3>
-
-  <p>
-    Built two VPCs, launched EC2 instances, configured VPC Flow Logs and CloudWatch,
-    established VPC peering, and used Logs Insights to troubleshoot traffic.
-  </p>
-
-  <div class="tags">
-    <span>VPC</span>
-    <span>EC2</span>
-    <span>CloudWatch</span>
-    <span>IAM</span>
-  </div>
-
-  <span>Case study ↗</span>
-
-</article>
       <div class="project-grid">
-        <article class="project featured" data-tags="aws monitoring security">
+        <article class="project featured" data-tags="aws monitoring security" onclick="window.location.href='vpc-flow-logs.html'" style="cursor: pointer;" role="link" tabindex="0">
           <div class="project-top"><span class="number">01</span><span class="badge">AWS • NETWORKING</span></div>
           <h3>VPC Monitoring with Flow Logs</h3>
           <p>Built two VPCs, launched EC2 instances, configured VPC Flow Logs and CloudWatch, established VPC peering, and used Logs Insights to troubleshoot traffic.</p>
@@ -130,7 +102,7 @@ Python • PowerShell • Shell
           <a href="https://0babhi.github.io/Abhishek.biradar/" target="_blank" rel="noreferrer">Case study ↗</a>
         </article>
 
-        <article class="project" data-tags="aws">
+        <article class="project" data-tags="aws" onclick="window.open('https://nextwork.ai/content_maroon_agile_monkey/docs/aws-networks-vpc', '_blank', 'noopener')" style="cursor: pointer;" role="link" tabindex="0">
           <div class="project-top"><span class="number">02</span><span class="badge">AWS</span></div>
           <h3>AWS VPC & Network Architecture</h3>
           <p>Hands-on work with VPCs, public/private subnets, route tables, gateways, security groups, VPC peering, endpoints and connectivity testing.</p>
@@ -138,7 +110,7 @@ Python • PowerShell • Shell
           <span class="project-status">Hands-on project</span>
         </article>
 
-        <article class="project" data-tags="aws">
+        <article class="project" data-tags="aws" onclick="window.open('https://nextwork.ai/content_maroon_agile_monkey/docs/aws-host-a-website-on-s3', '_blank', 'noopener')" style="cursor: pointer;" role="link" tabindex="0">
           <div class="project-top"><span class="number">03</span><span class="badge">AWS • STORAGE</span></div>
           <h3>Static Website on Amazon S3</h3>
           <p>Configured an S3-based static website and worked through bucket access, hosting concepts and AWS CLI operations.</p>
@@ -162,7 +134,7 @@ Python • PowerShell • Shell
           <span class="project-status">Automation</span>
         </article>
 
-        <article class="project" data-tags="aws security">
+        <article class="project" data-tags="aws security" onclick="window.open('https://nextwork.ai/content_maroon_agile_monkey/docs/aws-networks-security', '_blank', 'noopener')" style="cursor: pointer;" role="link" tabindex="0">
           <div class="project-top"><span class="number">06</span><span class="badge">AWS • SECURITY</span></div>
           <h3>AWS Security Labs</h3>
           <p>Hands-on projects covering IAM, KMS, Secrets Manager, GuardDuty and security monitoring concepts with practical AWS configurations.</p>
@@ -186,7 +158,7 @@ Python • PowerShell • Shell
           <span class="project-status">Hands-on project</span>
         </article>
 
-        <article class="project" data-tags="aws security">
+        <article class="project" data-tags="aws security" onclick="window.open('https://nextwork.ai/content_maroon_agile_monkey/docs/aws-networks-ec2', '_blank', 'noopener')" style="cursor: pointer;" role="link" tabindex="0">
           <div class="project-top"><span class="number">09</span><span class="badge">AWS • COMPUTE</span></div>
           <h3>AWS Infrastructure & Application Labs</h3>
           <p>Worked through EC2, RDS/Aurora, CloudFormation, IAM roles, Auto Scaling concepts and AWS CLI troubleshooting.</p>
@@ -200,6 +172,25 @@ Python • PowerShell • Shell
           <p>Practical troubleshooting around DNS, HTTP/HTTPS, TLS, CDN traffic paths, access errors and internal-versus-external reachability.</p>
           <div class="tags"><span>Akamai</span><span>DNS</span><span>HTTP</span><span>TLS</span></div>
           <span class="project-status">Operations experience</span>
+        </article>
+
+        <article class="project" data-tags="aws networking"
+                 onclick="window.open('https://nextwork.ai/content_maroon_agile_monkey/docs/aws-networks-private', '_blank', 'noopener')"
+                 style="cursor: pointer;" role="link" tabindex="0">
+          <div class="project-top"><span class="number">11</span><span class="badge">AWS • NETWORKING</span></div>
+          <h3>VPC Private Networking</h3>
+          <p>Open the NextWork project documentation for private VPC networking.</p>
+          <div class="tags"><span>VPC</span><span>Private Networking</span></div>
+          <span class="project-status">View NextWork project ↗</span>
+        </article>
+        <article class="project" data-tags="aws networking"
+                 onclick="window.open('https://nextwork.ai/content_maroon_agile_monkey/docs/aws-networks-connectivity', '_blank', 'noopener')"
+                 style="cursor: pointer;" role="link" tabindex="0">
+          <div class="project-top"><span class="number">12</span><span class="badge">AWS • NETWORKING</span></div>
+          <h3>VPC Connectivity & Peering</h3>
+          <p>Open the NextWork project documentation for VPC connectivity, network paths and connectivity testing.</p>
+          <div class="tags"><span>VPC</span><span>Networking</span><span>Connectivity</span></div>
+          <span class="project-status">View NextWork project ↗</span>
         </article>
       </div>
     </section>
@@ -260,6 +251,18 @@ Python • PowerShell • Shell
   </main>
 
   <footer><span>© 2026 Abhishek Biradar</span><span>Built for GitHub Pages</span></footer>
+
+  <script>
+    document.querySelectorAll('.project[role="link"]').forEach(function(card) {
+      card.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          card.click();
+        }
+      });
+    });
+  </script>
+
   <script src="script.js"></script>
 </body>
 </html>
